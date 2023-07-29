@@ -8,18 +8,19 @@ import Cart from 'react-native-vector-icons/MaterialIcons';
 import Menu from 'react-native-vector-icons/Ionicons';
 import ProfileScreen from '../screens/ProfileScreen';
 import ShoppingCartScreen from '../screens/ShoppingCartScreen.js';
+import HomeStack from './HomeStack';
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        // headerShown: false,
+        headerShown: false,
         tabBarShowLabel: false,
       }}>
       <Tab.Screen
-        name="HomeScreen"
-        component={HomeScreen}
+        name="HomeScreenStack"
+        component={HomeStack}
         options={{
           tabBarIcon: ({color, size}) => (
             <Home name="home" color={color} size={size} />
